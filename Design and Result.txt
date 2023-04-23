@@ -1,0 +1,26 @@
+Design:
+
+Class Carver
+	Main()
+		Takes file name + directory
+		run method carve()
+
+Class CarveThem
+	carve()
+		Create threads and associate to Carving to run()
+
+Class Carving implements Runnable
+	construct()
+	run()
+		Go through the file and look for ff d8 ff
+		if found -> call carveJpeg
+	carveJpeg()
+		Save everything to an outputStream until it finds ff d9
+
+
+
+Results:
+
+For Goblins.dd : Folder output named Gobles, found 8 goblins, and 2 other files which are simply copy of certain goblins with the EXIF extension.
+
+For GoblinsV2.dd: Folder output named GoblesV2, found 5 goblins, and 5 other beginning of goblins, but we didn't find where this sudden cut comes from.
